@@ -1,0 +1,13 @@
+setup.py
+browserlockproctor/__init__.py
+browserlockproctor/browserlockproctor.py
+browserlockproctor/static/README.txt
+browserlockproctor/static/css/browserlockproctor.css
+browserlockproctor/static/html/browserlockproctor.html
+browserlockproctor/static/js/src/browserlockproctor.js
+browserlockproctor_xblock.egg-info/PKG-INFO
+browserlockproctor_xblock.egg-info/SOURCES.txt
+browserlockproctor_xblock.egg-info/dependency_links.txt
+browserlockproctor_xblock.egg-info/entry_points.txt
+browserlockproctor_xblock.egg-info/requires.txt
+browserlockproctor_xblock.egg-info/top_level.txt

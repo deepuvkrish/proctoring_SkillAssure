@@ -1,0 +1,2 @@
+[xblock.v1]
+browserlockproctor = browserlockproctor:BrowserlockproctorXBlock

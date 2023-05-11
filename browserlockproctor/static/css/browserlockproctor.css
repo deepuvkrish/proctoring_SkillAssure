@@ -1,0 +1,112 @@
+.proctoring-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
+}
+.prcinstruct{
+    color:rgb(4, 23, 52);
+}
+.successMsg{
+    color: green;
+}
+
+.endMsg{
+    color:red
+}
+.warning{
+    color:rgb(255, 115, 0);
+    font-size: 18px;
+}
+.titleMenu{
+    display: flex;
+    flex-direction: row;
+}
+.browserlock-status--locked {
+    background-color: #e74c3c;
+}
+
+.showProcScreenDisable{
+    visibility: hidden;
+}
+.showProcScreen{
+    visibility: visible;
+}
+.proctorstrbtn{
+    background-color: rgb(1, 1, 105);
+    color: #FFF;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border:none !important;
+    align-self: center;
+}
+.proctorstrbtn:hover{
+    background-color: rgb(3, 63, 184);
+    cursor: pointer;
+}
+.proctorstpBeforebtn{
+    visibility: hidden;
+}
+.proctorstpbtn{
+    visibility: visible;
+    background-color: greenyellow;
+    color:black;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border:none !important;
+    align-self: center;
+}
+
+.proctorstpbtn:hover{
+    background-color: rgb(0, 255, 4);
+    cursor: pointer;
+}
+.examContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    visibility: hidden;
+}
+.examContentVisible{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    visibility: visible;
+}
+
+.terminate{
+    background-color: rgb(255, 152, 129);
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border:none !important;
+    align-self: center;
+}
+.cameraBefore{
+    visibility: hidden;
+}
+.cameraAuth{
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    margin-left: 0px;
+    border: 3px solid #ccc;
+    background: black;
+    top: 50px;
+    bottom: 10px;
+    z-index: 10;
+    right: 10px;
+    visibility: visible;
+}
+
+.IntructionMenu{
+    visibility: visible;
+}
+
+.IntructionMenuHide{
+    display: none !important;
+}
