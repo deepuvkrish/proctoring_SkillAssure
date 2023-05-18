@@ -5,23 +5,46 @@
             <h1>Proctoring</h1>
             <span id="enabledisable" class="enbdsb"> </span>
         </div>
-        <div class="IntructionMenu">
-            <ul>
-                <li>You must not use headphones, ear buds, or any other type of listening equipment.</li>
-                <li>You must not communicate with any other person by any means. </li>
-                <li>You must not use a phone for any reason. </li>
-                <li>You must not leave the room during the exam for any reason, unless posted rules for the exam specifically permit you to do so.</li>
+
+
+        <div class="IntructionMenu" id="instructionId">
+            <ul class="intructorUl">
+                <li><i class="fa-solid fa-circle-exclamation fa-fade" style="color: #ff1414;"></i> You must not use headphones, ear buds, or any other type of listening equipment.</li>
+                <li><i class="fa-solid fa-circle-exclamation fa-fade" style="color: #ff1414;"></i> You must not communicate with any other person by any means. </li>
+                <li><i class="fa-solid fa-circle-exclamation fa-fade" style="color: #ff1414;"></i> No other personalities are allowed inside your camera viewport.</li>
+                <li><i class="fa-solid fa-circle-exclamation fa-fade" style="color: #ff1414;"></i> You must not use a phone for any reason. </li>
+                <li><i class="fa-solid fa-circle-exclamation fa-fade" style="color: #ff1414;"></i> You must not leave the room during the exam for any reason, unless posted rules for the exam specifically permit you to do so.</li>
             </ul>
-            <button id="camAccess" class="camBtn">Allow Camera & Microphone for the Proctoring purpose</button>
-            
+            <button id="camAccess" class="camBtn">Allow Camera & Microphone for the Proctoring purpose</button>    
         </div>
 
+
+
+        <div class="warningMsgHide" id="warningId">
+            <h5> For an better result and efficient grading we have undertook the following features</h5>
+            <ul class="warningUl">
+                <li><i class="fa-solid fa-triangle-exclamation fa-beat-fade" style="color: #edd400;"></i>
+                     Right click is disabled until you finish your Assessments.</li>
+                <li><i class="fa-solid fa-triangle-exclamation fa-beat-fade" style="color: #edd400;"></i> Switching windows or Tabs are prohibited, and considered as violation.</li>
+                <li><i class="fa-solid fa-triangle-exclamation fa-beat-fade" style="color: #edd400;"></i>  Bluring or covering camera will mark as violation.</li>
+                <li><i class="fa-solid fa-triangle-exclamation fa-beat-fade" style="color: #edd400;"></i> More than three attempts of violation, you'll be terminated without any warning.</li>
+            </ul>
+            <div class="understoodSection">
+                <button id="understoodID" class="understoodBtn">
+                    <i class="fa-square-checkhide" id="understoodIcon"></i>
+
+                </button>
+                    I Understood the terms and conditions
+            </div>
+        </div>
+
+
         <div class="showProcScreen" id="showScreen">
-            <button id="proctorstrt" class="proctorstrbtn">Start your assessment</button>
+            <button id="proctorstrt" class="proctorstrbtn" disabled>Start your assessment</button>
             <video id="videoCam" class="cameraBefore"></video>
             <p id="proctorInstruction" class="prcinstruct"></p>
             <div class="examContent" id="examCnt">
-                <p>Choose your favorite Web language:</p>
+                <p> Q1) Choose your favorite Web language:</p>
                 <form>
                 <input type="radio" id="html" name="fav_language" value="HTML">
                 <label for="html">HTML</label><br>
@@ -30,18 +53,24 @@
                 <input type="radio" id="javascript" name="fav_language" value="JavaScript">
                 <label for="javascript">JavaScript</label>
                 </form> 
+                <p>Q2) Choose your favorite Web language:</p>
                 <form>
                     <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1"> I have a bike</label><br>
+                    <label for="vehicle1"> Database</label><br>
                     <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                    <label for="vehicle2"> I have a car</label><br>
+                    <label for="vehicle2"> Frontend</label><br>
                     <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                    <label for="vehicle3"> I have a boat</label>
+                    <label for="vehicle3"> Backend</label>
                 </form> 
+                <p> Q3) Explain what is typescript? </p>
                 <input type="text">
             </div>
             <button id="proctorstp" class="proctorstpBeforebtn">Submit your Assessment</button>
         </div>
 
+
+
+
     </div>
 </body>
+<script src="https://kit.fontawesome.com/77a003771d.js" crossorigin="anonymous"></script>

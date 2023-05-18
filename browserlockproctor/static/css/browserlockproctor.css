@@ -1,9 +1,9 @@
 .proctoring-container {
-    border: 1px solid #ccc;
     padding: 10px;
-    margin-bottom: 20px;
     display: flex;
+    margin-bottom: 20px;
     flex-direction: column;
+    border: 1px solid #ccc;
     justify-content: center !important;
 }
 .prcinstruct{
@@ -13,16 +13,22 @@
     color: green;
 }
 
+.enbdsb{
+    font-weight: 700;
+    margin-left: 10px;
+}
 .endMsg{
     color:red
 }
 .warning{
-    color:rgb(255, 115, 0);
     font-size: 18px;
+    color:rgb(255, 115, 0);
 }
 .titleMenu{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: start;
 }
 .browserlock-status--locked {
     background-color: #e74c3c;
@@ -32,16 +38,20 @@
     visibility: hidden;
 }
 .showProcScreen{
+    display: flex;
+    align-items: center;
     visibility: visible;
+    flex-direction: column;
 }
+
 .proctorstrbtn{
-    background-color: rgb(1, 1, 105);
-    color: #FFF;
     width: 200px;
     height: 30px;
+    color: #FFF;
     border-radius: 5px;
-    border:none !important;
     align-self: center;
+    border:none !important;
+    background-color: rgb(1, 1, 105);
 }
 .proctorstrbtn:hover{
     background-color: rgb(3, 63, 184);
@@ -66,16 +76,14 @@
     cursor: pointer;
 }
 .examContent{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    visibility: hidden;
+    display: none;
 }
 .examContentVisible{
     display: flex;
+    margin-bottom: 15px;
+    visibility: visible;
     flex-direction: column;
     justify-content: center;
-    visibility: visible;
 }
 
 .terminate{
@@ -86,27 +94,113 @@
     border:none !important;
     align-self: center;
 }
+
+
+.camBtn{
+    height: 30px;
+    width: 385px;
+    border-radius: 5px;
+    transition-duration: 1s;
+    border: none !important;
+    box-shadow: -1px 2px 3px 1px gray;
+    background: linear-gradient(45deg,#0070ff,#00d7d7);
+}
+.camBtn:hover{
+    cursor: pointer;
+    width: 388px;
+    height: 33px;
+}
+.understoodSection{
+    display: flex;
+    flex-direction: row;
+}
+.understoodBtn{
+    width: 15px;
+    height: 15px;
+    display: flex;
+    border-radius: 5px;
+    margin-right: 10px;
+    align-items: center;
+    border: none !important;
+    justify-content: space-evenly;
+    box-shadow: 0px 1px 1px 1px gray;
+    background: linear-gradient(45deg,#fff,#fff);
+}
+.understoodBtn:hover{
+    cursor: pointer;
+}
+
+
 .cameraBefore{
-    visibility: hidden;
+    display: none;
 }
 .cameraAuth{
-    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 10;
+    bottom: 10px;
     width: 150px;
     height: 100px;
     margin-left: 0px;
-    border: 3px solid #ccc;
-    background: black;
-    top: 50px;
-    bottom: 10px;
-    z-index: 10;
-    right: 10px;
+    position: absolute;
     visibility: visible;
+    background: black;
+    border: 3px solid #ccc;
 }
 
 .IntructionMenu{
-    visibility: visible;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    flex-direction: column;
 }
 
 .IntructionMenuHide{
     display: none !important;
+}
+
+.warningMsg{
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+    display: flex !important;
+}
+.warningMsgHide{
+    display: none !important;
+}
+
+
+button:disabled,
+    button[disabled] {
+        opacity: 0.5;
+        width: 200px;
+        height: 30px;
+        color: white;
+        border-radius: 5px;
+        cursor: not-allowed;
+        border:none !important;
+        background-color: rgb(1, 1, 105);
+    }
+    button[disabled]:hover{
+        cursor: not-allowed;
+        background-color: #ccc;
+
+    }
+
+ul{
+    
+    font-size: 14px;
+    line-height: 25px;
+    font-family: inter;
+}
+.warningUl, .intructorUl{
+    list-style: none;
+}
+
+.fa-square-check{
+    font-size: 17px;
+}
+
+.fa-square-checkhide{
+    visibility: hidden;;
 }

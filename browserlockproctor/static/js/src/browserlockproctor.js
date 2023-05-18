@@ -1,9 +1,11 @@
 /* Javascript for BrowserlockproctorXBlock. */
 function BrowserlockproctorXBlock(runtime, element) {
+    let allow=false;
+    let understood=false;
     let count=0;
+
     function lockBrowser(){
         isLocked=true;
-       
         var currentUrl = window.location.href;
         // window.open(currentUrl,'_blank');
         var start = document.getElementById('proctorstrt');
@@ -84,11 +86,12 @@ function BrowserlockproctorXBlock(runtime, element) {
     }
 
     function leaveAssessment(){
+        document.getElementById('videoCam').classList.replace("cameraAuth","cameraBefore");
         isLocked=false;
         window.onbeforeunload=null;
         setTimeout(() => {
             window.location.reload();
-          }, 4000);
+          }, 3000);
           
     }
 
@@ -120,7 +123,7 @@ function BrowserlockproctorXBlock(runtime, element) {
         disable.classList.toggle('endMsg');
         document.getElementById('proctorInstruction').innerHTML='Thankyou for taking the examination'
         document.getElementById('proctorstp').disabled = true; 
-
+        leaveAssessment()
     }
 
     function confirmLeave(event){
@@ -144,27 +147,37 @@ function BrowserlockproctorXBlock(runtime, element) {
         }
     }
     
-
-
-
-
-    
-
     $(function ($) {
+        $('#understoodID').click(function(eventObject) {
+            var understdIcon=document.getElementById('understoodIcon');
+            understdIcon.classList.replace('fa-square-checkhide','fa-square-check');
+            understdIcon.classList.add('fa-solid');
+            understood=true;
+            eventObject.preventDefault(); 
+            document.getElementById('proctorstrt').disabled=false;
+
+           })
+
+        $('#proctorstrt').click(function(eventObject) {
+        if(confirm('Are you sure to start the exam?')){
+            eventObject.preventDefault();
+            document.getElementById('warningId').classList.replace("warningMsg","warningMsgHide");
+            if(allow==true && understood==true){
+                lockBrowser();
+            }
+
+        }
+        })
+        
        $('#proctorstp').click(function(eventObject) {
-        if (confirm('Are you sure you want to submit now?')){
+        if (confirm('Are you sure,you want to submit now?')){
             eventObject.preventDefault();                       
             unlockBrowser();
         }
        })
 
-       $('#proctorstrt').click(function(eventObject) {
-        if(confirm('Are you sure to start the exam?')){
-            eventObject.preventDefault(); 
-            lockBrowser();
-        }
-       })
        $('#camAccess').click(function openCam(){
+            allow=true;
             let All_mediaDevices=navigator.mediaDevices
             if (!All_mediaDevices || !All_mediaDevices.getUserMedia) {
             console.log("getUserMedia() not supported.");
@@ -187,15 +200,16 @@ function BrowserlockproctorXBlock(runtime, element) {
             })
             .catch(function(e) {
             console.log(e.name + ": " + e.message);
-
             });
-            document.getElementById('showScreen').classList.replace("showProcScreenDisable","showProcScreen");
             document.getElementById('videoCam').classList.replace("cameraBefore","cameraAuth");
-            document.getElementById('instructmenu').classList.replace("IntructionMenu","IntructionMenuHide");
+            document.getElementById('instructionId').classList.replace("IntructionMenu","IntructionMenuHide");
+            document.getElementById('warningId').classList.replace("warningMsgHide","warningMsg");
 
-        }
-       
-       
-       )
+        })
+        
     });
 }
+
+// 
+// document.getElementById('showScreen').classList.replace("showProcScreenDisable","showProcScreen");
+// 
